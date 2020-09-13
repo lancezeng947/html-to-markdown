@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+
+{% block title %} HTML-2-Markdown {%endblock %}
+
+{% load static %}
+{% block content %}
+
+<div class="wrapper">
+	<div class="center-content">
+		<div class="head">
+			<h1>H2M</h1>
+			<h3>Convert Kindle HTML-Notes to Markdown</h3>
+		</div>
+
+		<div class="convert-wrapper">
+			<div class="file-loader pt-5 pb-5">
+				<form method = "POST" enctype = "multipart/form-data" class="md-form">
+				{% csrf_token %}
+					<input type="file" name="upload" accept=".html">
+
+				    <button type="submit">Convert</button> 
+				    <p class="error-block">{{error}}</p>
+
+					<div class="style-bar mt-3">
+						Customize Markdown Styling
+					  	<button type="button" data-toggle="collapse" data-target="#style-dict" aria-expanded="false" aria-controls="collapseExample">
+					  	<strong>+</strong>
+						</button>
+
+						<div class="collapse mt-1" id="style-dict">
+					  		<div class="card card-body">
+						    	<div class="form-group">
+							      <label for="title_sel">Title:</label>
+							      <select class="form-control" id="title_sel" name="title_sel">
+							        <option selected="selected"># (Heading Level 1)</option>
+							        <option>## (Heading Level 2)</option>
+							        <option>### (Heading Level 3)</option>
+							        <option>#### (Heading Level 4)</option>
+							        <option>##### (Heading Level 5)</option>
+							        <option>###### (Heading Level 6)</option>
+							      </select>
+							    </div>
+
+							    <div class="form-group">
+							      <label for="author_sel">Author:</label>
+							      <select class="form-control" id="author_sel" name="author_sel">
+							        <option># (Heading Level 1)</option>
+							        <option selected="selected">## (Heading Level 2)</option>
+							        <option>### (Heading Level 3)</option>
+							        <option>#### (Heading Level 4)</option>
+							        <option>##### (Heading Level 5)</option>
+							        <option>###### (Heading Level 6)</option>
+							      </select>
+							    </div>
+
+							    <div class="form-group">
+							      <label for="section_sel">Section | Chapter:</label>
+							      <select class="form-control" id="section_sel" name="section_sel">
+							        <option># (Heading Level 1)</option>
+							        <option>## (Heading Level 2)</option>
+							        <option selected="selected">### (Heading Level 3)</option>
+							        <option>#### (Heading Level 4)</option>
+							        <option>##### (Heading Level 5)</option>
+							        <option>###### (Heading Level 6)</option>
+							      </select>
+							  	</div>
+
+							    <div class="form-group">
+							      <label for="location_sel">Location | Page #:</label>
+							      <select class="form-control" id="location_sel" name="location_sel">
+							        <option>* (Italicize)</option>
+							        <option selected="selected">** (Bold)</option>
+							        <option>*** (Italicize & Bold)</option>
+							      </select>
+							  	</div>
+
+					  		</div>
+					  	</div>
+					  </div>
+
+					</form>
+
+			</div>
+		</div>
+
+		<div class=mt-5>
+			<h3>
+				Kindle Notebook HTML to Markdown
+			</h3>
+			<p>Our converter transforms Notebooks exported from your Kindle to Markdown for you to enjoy in your favorite markdown editor.</p>
+
+			<p>Your HTML Notebook must be an <strong>unaltered export</strong> 
+			for our converter to work correctly.We hope you like our service!</p>
+
+
+		</div>
+		
+
+{% endblock %}
+

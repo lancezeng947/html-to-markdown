@@ -1,0 +1,108 @@
+html,
+
+header {
+	padding: 1%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*Home Page*/
+.wrapper {
+	display: block;
+	width:100%;
+}
+
+.center-content {
+	text-align: center !important; 
+}
+
+.head h1{
+	font-family: 'Libre Baskerville', serif;
+}
+
+
+.convert-wrapper {
+	background-color: #F8F9FA;
+	width: 70%;
+	margin-right: 15%;
+	margin-left: 15%;
+}
+
+.file-loader {
+	width: 70%;
+	margin-right: 15%;
+	margin-left: 15%;
+}
+
+.file-loader input {
+	width: 80%;
+}
+
+
+.error-block {
+	position: absolute;
+	padding-left: 1%;
+	font-weight: bold;
+	color: red;
+	display: inline-block;
+}
+
+
+.style-bar {
+	font-size: 2vh;
+	font-weight: bold;
+	text-align: left;
+}
+
+.card {
+	font-size: 1.5vh;
+}
+
+
+
+.image-wrapper {
+	display: grid;
+	grid-column-gap: 5%;
+	grid-template-columns: 50% 50%;
+	width: 70%;
+	margin-right: 15%;
+	margin-left: 15%;
+}
+
+.image-before {
+	display: inline;
+	text-align: left;
+}
+
+.image-wrapper p {
+	border-bottom: double;
+	font-size: 2vh;
+	text-align: center;
+}
+
+.image-before img {
+	display: inline;
+	padding: 1%;
+	max-width: 100%
+}
+
+
+.btn-wrapper {
+	background-color: #F8F9FA;
+	display: grid;
+	grid-column-gap: 1%;
+	grid-template-columns: 50% 50%;
+	width: 50%;
+	margin-right: 25%;
+	margin-left: 25%;
+}
+
+.about-wrapper {
+	width: 70%;
+	margin-right: 15%;
+	margin-left: 15%;
+	background-color: #F8F9FA;
+}
+

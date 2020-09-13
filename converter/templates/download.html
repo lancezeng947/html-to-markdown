@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} File Processed {%endblock %}
+
+{% block content %}
+
+<div class="wrapper">
+	<div class="center-content">
+
+		<div class="head">
+			<h1>H2M</h1>
+			<h3>Convert Kindle HTML-Notes to Markdown</h3>
+		</div>
+
+		<div class="convert-wrapper pt-3">
+			<h3>File Conversion Complete</h3>
+			<p>{{ file_name }}.md</p>
+			<div class="btn-wrapper mt-3 pt-1 pb-3">
+
+				<div>
+
+					<form method="POST">
+					{% csrf_token %}
+					<button type="submit">Download</button>
+					</form>
+				</div>
+
+				<div>
+
+					<a href="/"><button class="button">Convert Another</button></a>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+</div>
+
+{% endblock %}

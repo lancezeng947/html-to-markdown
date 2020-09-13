@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+	<div class="center-content">
+		<div class="head">
+			<h1>H2M</h1>
+			<h3>Convert Kindle HTML-Notes to Markdown</h3>
+		</div>
+
+
+
+		<div class="about-wrapper mt-2 mb-2 pb-3 pt-3">
+			<h3>About H2M Converter</h3>
+			<br>
+			<p>Developed as a creative sideproject as an exercise in Process Automation. Effortlessly convert your Kindle Notebook exports to Markdown.</p>
+
+
+			<div class="image-wrapper mt-5">
+
+				<p><strong>Before</strong></p>
+				<p><strong>After</strong></p>
+				<div class="image-before">
+					<img src="{% static 'book.jpg' %}">
+				</div>
+
+				<div class="image-before">
+
+					<img src="{% static 'bookmd.JPG' %}">
+				</div>
+				<small>Sample Kindle Notebook Export</small>
+				<small>Sample Markdown format notes Dillinger</small>
+			</div>
+		</div>
+		<a href="/"><button>Try Now</button></a> 
+	</div>
+
+
+
+</div>
+
+
+
+{% endblock %}
